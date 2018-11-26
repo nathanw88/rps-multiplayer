@@ -33,43 +33,147 @@
       media="screen"
       href="assets/css/main.css"
     />
-    <script src="assets/javascript/main.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
+        <form id="name-form" class="text-center">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter Name"
+            />
+          </div>
+
+          <button type="submit" id="name-btn" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+        <hr class="my-4" />
+
         <div class="container">
           <div class="row">
             <div class="card text-white bg-dark mb-3 col-md-5">
-              <div class="card-header">Header</div>
+              <div id="player1-name" class="card-header text-center">
+                Player 1
+              </div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <h5 class="card-title"></h5>
+                <!-- container to be show for after choices are made -->
+                <div class="results">
+                  <h1 id="results-player1"></h1>
+                  <h5 id="choice-player1"></h5>
+                </div>
+                <!-- container to be shown while players are making choices. -->
+
+                <div class="choices">
+                  <button
+                    id="rock-player1"
+                    data-value="rock"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Rock!
+                  </button>
+                  <button
+                    id="paper-player1"
+                    data-value="paper"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Paper!
+                  </button>
+                  <button
+                    id="scissors-player1"
+                    data-value="scissors"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Scissors!
+                  </button>
+                </div>
+
+                <br />
+                <br />
+                <p>
+                  Wins: <span id="wins-player1">0</span> Losses:<span
+                    id="losses-player1"
+                    >0</span
+                  >
                 </p>
               </div>
             </div>
+
             <div class="col-md-2"></div>
+
             <div class="card bg-light mb-3 col-md-5">
-              <div class="card-header">Header</div>
+              <div id="player2-name" class="card-header text-center">
+                Player 2
+              </div>
               <div class="card-body">
-                <h5 class="card-title">Light card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <h5 class="card-title"></h5>
+
+                <!-- container to show after choices are made -->
+                <div class="results">
+                  <h1 id="results-player2"></h1>
+                  <h5 id="choice-player2"></h5>
+                </div>
+                <!-- container to hide after choice made -->
+
+                <div class="choices">
+                  <button
+                    id="rock-player2"
+                    data-value="rock"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Rock!
+                  </button>
+                  <button
+                    id="paper-player2"
+                    data-value="paper"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Paper!
+                  </button>
+                  <button
+                    id="scissors-player2"
+                    data-value="scissors"
+                    class="player-choice btn btn-secondary"
+                  >
+                    Scissors!
+                  </button>
+                </div>
+
+                <br />
+                <br />
+                <p>
+                  Wins: <span id="wins-player2">0</span> Losses:<span
+                    id="losses-player2"
+                    >0</span
+                  >
                 </p>
               </div>
             </div>
           </div>
         </div>
+
         <hr class="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="container text-center" id="chat"><p id="chat">chat</p></div>
+        <form class="text-center">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="chat-input"
+              placeholder="Chat here"
+            />
+          </div>
+
+          <button id="chat-btn" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
+    <script src="assets/javascript/main.js"></script>
   </body>
 </html>
